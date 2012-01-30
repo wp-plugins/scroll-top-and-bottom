@@ -12,7 +12,7 @@ Author URI: http://shariarbd.com/
 function scroll_tandbhead() 
 {
 include('cssandjs.php');
-include('jq.php'); // This portiong making problem if jQuery pre installed
+include('jq.php'); // This portion making problem if jQuery previously installed. In that case, just make this  full line as a commeent i.e. place // before of this line and I hope it may work. 
 }
    
 
