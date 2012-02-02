@@ -13,7 +13,7 @@
 
 == Description ==
    Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. This plugin is created with jQuery.
-Demo at <a href="http://shariarbd.com/" target="_blank">sharirabd.com</a>. Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
+Demo at <a href="http://shariarbd.com/plugins/scroll-top-and-bottom/" target="_blank">sharirabd.com</a>. Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
 
 
 == Installation ==
