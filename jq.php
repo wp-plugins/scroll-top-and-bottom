@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/scroll-top-and-bottom/jquery.min.js" ></script>

@@ -1,0 +1,2 @@
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('url'); ?>/wp-content/plugins/scroll-top-and-bottom/css/style.css"/> 
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/scroll-top-and-bottom/scroll-startstop.jquery.js"></script>
