@@ -1,2 +1,2 @@
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('url'); ?>/wp-content/plugins/scroll-top-and-bottom/css/style.css"/> 
-<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/scroll-top-and-bottom/scroll-startstop.jquery.js"></script>
+<?php echo '<script type="text/javascript" src="' .plugins_url( 'scroll-top-and-bottom/scroll-startstop.jquery.js' , dirname(__FILE__) ). '" ></script>'; ?>
+<link rel="stylesheet" type="text/css" <?php echo ' href="'.plugins_url( 'scroll-top-and-bottom/css/style.css' , dirname(__FILE__) ). '" />'; ?> 

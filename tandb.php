@@ -1,7 +1,15 @@
-
-		<div style="display:none;" class="nav_up" id="nav_up">Top</div>
-		<div style="display:none;" class="nav_down" id="nav_down">Bottom</div>
-
+		<?php $wp_STAB_icon_Select = get_option('STAB_icon_Select');
+			 if($wp_STAB_icon_Select != true){
+			 $wp_STAB_icon_Select =2;
+			 }
+		
+		 ?>
+        <div style="display:none;" class="nav_up" id="nav_up">
+         <?php echo '<img src="' .plugins_url( 'scroll-top-and-bottom/icon/'.$wp_STAB_icon_Select.'_u.ico' , dirname(__FILE__) ). '" > '; ?>
+          </div>
+		<div style="display:none;" class="nav_down" id="nav_down">
+         <?php echo '<img src="' .plugins_url( 'scroll-top-and-bottom/icon/'.$wp_STAB_icon_Select.'_d.ico' , dirname(__FILE__) ). '" > '; ?>
+        </div>
 		
 		<script>
 			$(function() {
