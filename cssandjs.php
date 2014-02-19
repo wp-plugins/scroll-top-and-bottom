@@ -1,2 +1,0 @@
-<?php echo '<script type="text/javascript" src="' .plugins_url( 'scroll-top-and-bottom/scroll-startstop.jquery.js' , dirname(__FILE__) ). '" ></script>'; ?>
-<link rel="stylesheet" type="text/css" <?php echo ' href="'.plugins_url( 'scroll-top-and-bottom/css/style.css' , dirname(__FILE__) ). '" />'; ?> 
