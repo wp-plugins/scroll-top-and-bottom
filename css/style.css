@@ -1,0 +1,31 @@
+.scroll-to-top{
+	padding:2px;
+	position:fixed;
+	width:32px;
+	height:32px;
+	bottom:20px;
+	opacity:0.8;
+	right:30px;
+	cursor: pointer;
+	z-index: 9999;
+	}
+.scroll-to-bottom{
+	padding:2px;
+	position:fixed;
+	width:32px;
+	height:32px;
+	bottom:20px;
+	opacity:0.8;
+	right:30px;
+	cursor: pointer;
+	z-index: 9999;
+	}
+@media screen and (max-width:500px)
+{	
+		.scroll-to-top,
+		.scroll-to-bottom{
+			display: none;
+		}
+
+	}
+
