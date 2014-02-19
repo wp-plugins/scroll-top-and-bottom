@@ -8,12 +8,12 @@
     Author: Md. Shariar
     Donate link: http://shariarbd.com/
     Requires at least: WordPress 3.0 
-    Tested up to: 3.3.2 
-    Scroll Top and Bottom is created to scroll to top and bottom of the site. 12 Different Icon are available now.
+    Tested up to: 3.8.1 
+    Scroll Top and Bottom is created to scroll to top and bottom of the site. 12 Different Icon are available now. 
 
 
 == Description ==
-   Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now, 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
+   Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Will response on Mobile Device as the button will not display if width is below 500px. Now, 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
 
 
 == Installation ==
@@ -28,4 +28,4 @@
 
 == Screenshots ==
 
-1. Default logo with the plugin activated
+1. Settings Page of the plugis.

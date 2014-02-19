@@ -2,8 +2,8 @@
 /*
 Plugin Name: Scroll Top and Bottom
 Plugin URI: http://shariarbd.com/plugins/scroll-top-and-bottom/
-Description: Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now, 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and Demo is here at http://shariarbd.com/. Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
-Version: 2.0
+Description: Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Will response on Mobile Device as the button will not display if width is below 500px. Now, 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
+Version: 2.5
 Author: Md. Shariar
 Author URI: http://shariarbd.com/ 
 */
@@ -14,7 +14,6 @@ Author URI: http://shariarbd.com/
 {
     if($_POST['STAB_UPDATE']){
 		update_option('STAB_icon_Select',$_POST['STAB_icon_Select']);
-		/*update_option('STAB_jQuery_deactive',$_POST['STAB_jQuery_deactive']);*/
 		update_option('STAB_jquery',$_POST['STAB_jquery']);
         echo '<h3 syle="color:%138604;">Plugin has been updated.</h3>';
 	}
@@ -115,13 +114,7 @@ $icondr="scroll-top-and-bottom/icon/";
 </div>
             
             </td>
-        </tr>
-        
-          <td><!-- <h3><input type="checkbox" id="STAB_jQuery_deactive" name="STAB_jQuery_deactive" value="STAB_jQuery_deactive" <?php if($wp_STAB_jQuery_deactive == true) { echo('checked="checked"'); } ?> />
-			<?php if($wp_STAB_jQuery_deactive == true) { echo("<span style=\"color:green\">: <label for=\"STAB_jQuery_deactive\">!</label></span>"); }
-			else
-			echo"<span style=\"color:red\">:<label for=\"STAB_jQuery_deactive\"> Deactive jQuery for Scroll Top and Bottom</label></span>"; ?></h3> --></td>
-        <tr>
+
           <td><input type="submit" name="STAB_UPDATE" value="Update" /></td>
         </tr>
       </table>
@@ -157,11 +150,11 @@ function scroll_tandbhead()
 $wp_STAB_jquery = get_option('STAB_jquery');
 if($wp_STAB_jquery=="no")
 {	
-include('cssandjs.php');
+echo '<link rel="stylesheet" type="text/css" href="'.plugins_url( 'scroll-top-and-bottom/css/style.css' , dirname(__FILE__) ). '" />'; 
 }
 else{
-echo '<script type="text/javascript" src="' .plugins_url( 'scroll-top-and-bottom/jquery.min.js' , dirname(__FILE__) ). '" ></script>';
-include('cssandjs.php');
+echo '<script type="text/javascript" src="' .plugins_url( 'scroll-top-and-bottom/js/jquery-2.1.0.min.js' , dirname(__FILE__) ). '" ></script>';
+echo '<link rel="stylesheet" type="text/css" href="'.plugins_url( 'scroll-top-and-bottom/css/style.css' , dirname(__FILE__) ). '" />'; 
 }
 }
 
