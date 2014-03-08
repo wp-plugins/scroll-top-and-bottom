@@ -30,11 +30,11 @@
 				 }); 
 			
 				   $('.scroll-to-top ').click(function(){
-				      $("html,documentElement").animate({ scrollTop: 0 }, 1000);
+				      $("html,body").animate({ scrollTop: 0 }, 1000);
 				      return false;
 				   });
 				   $('.scroll-to-bottom').click(function(){
-				      $('html,documentElement').animate({scrollTop: $(document).height()}, 1000);
+				      $('html,body').animate({scrollTop: $(document).height()}, 1000);
 				      return false;
 				   });
             });
