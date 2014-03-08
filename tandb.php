@@ -1,4 +1,5 @@
 		<?php $wp_STAB_icon_Select = get_option('STAB_icon_Select');
+			  $wp_STAB_scroll_speed = get_option('STAB_scroll_speed');
 			 if($wp_STAB_icon_Select != true){
 			 $wp_STAB_icon_Select =2;
 			 }
@@ -29,12 +30,12 @@
 
 				 }); 
 			
-				   $('.scroll-to-top ').click(function(){
-				      $("html,body").animate({ scrollTop: 0 }, 1000);
+				   $('.scroll-to-top').click(function(){
+				      $("html,body").animate({ scrollTop: 0 }, <?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>);
 				      return false;
 				   });
 				   $('.scroll-to-bottom').click(function(){
-				      $('html,body').animate({scrollTop: $(document).height()}, 1000);
+				      $('html,body').animate({scrollTop: $(document).height()}, <?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>);
 				      return false;
 				   });
             });

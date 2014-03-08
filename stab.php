@@ -2,8 +2,8 @@
 /*
 Plugin Name: Scroll Top and Bottom
 Plugin URI: http://shariarbd.com/plugins/scroll-top-and-bottom/
-Description: Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Will response on Mobile Device as the button will not display if width is below 500px. Now, 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
-Version: 2.5
+Description: Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now you can control the scrolling speed! 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
+Version: 2.6
 Author: Md. Shariar
 Author URI: http://shariarbd.com/ 
 */
@@ -15,17 +15,19 @@ Author URI: http://shariarbd.com/
     if($_POST['STAB_UPDATE']){
 		update_option('STAB_icon_Select',$_POST['STAB_icon_Select']);
 		update_option('STAB_jquery',$_POST['STAB_jquery']);
-        echo '<h3 syle="color:%138604;">Plugin has been updated.</h3>';
+    update_option('STAB_scroll_speed',$_POST['STAB_scroll_speed']);
+        echo '<h3>Plugin has been updated.</h3>';
 	}
 	$wp_STAB_icon_Select = get_option('STAB_icon_Select');
 	$wp_STAB_jQuery_deactive = get_option('STAB_jQuery_deactive');
+  $wp_STAB_scroll_speed = get_option('STAB_scroll_speed');
 	?>
 
 <div class="wrap">
   <form method="post" id="STAB_OPTION">
   <h2>Scroll Top and Bottom Option Page</h2>
 
-  <h2>Choose Icon</h2>
+  <h3>Choose Icon</h3>
 
 <?php
 $icondr="scroll-top-and-bottom/icon/";
@@ -104,22 +106,25 @@ $icondr="scroll-top-and-bottom/icon/";
       </tr>
     </table>
 
-            <h2>jQuery Enable – Disable</h2>
-            <h3>
+            <label for="STAB_scroll_speed"><h3>Scroll Speed</h3></label>
+            <input type="text" name="STAB_scroll_speed" id="STAB_scroll_speed" value="<?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>" > Note: 1000=1s and this field must be a number.
+
+            <h3>jQuery Enable – Disable</h3>
+            <h4>
               <?php $wp_STAB_jquery = get_option('STAB_jquery'); ?>
               <input name="STAB_jquery" type="radio" id="STAB_jquery_yes" value="yes" <?php if($wp_STAB_jquery != "no") { echo('checked="checked"'); } ?> /><label for="STAB_jquery_yes"> jQuery Enabled</label>
               <br>
               <input name="STAB_jquery" type="radio" id="STAB_jquery_no" value="no" <?php if($wp_STAB_jquery == "no") { echo('checked="checked"'); } ?> /><label for="STAB_jquery_no"> jQuery Disabled</label>
-            </h3>
+            </h4>
             <span style="color:green; font-size:14px; text-transform:uppercase;">If your site already use jQuery from before, it may not work. In that case, Disable jQuery here and it may work! </span>
-            <div style="float:right; color:#09F; font-size:14px; text-transform:uppercase;"><strong>If you love this plugin, <a href="http://wordpress.org/extend/plugins/scroll-top-and-bottom/" target="_blank">Please Rate as five star.</a></strong></div>
+            <div style="float:right; color:#09F; font-size:14px; text-transform:uppercase;">
+                <strong>If you love this plugin, <a href="http://wordpress.org/extend/plugins/scroll-top-and-bottom/" target="_blank">Please Rate as five star.</a></strong>
             </div>
-            
-<input type="submit" name="STAB_UPDATE" value="Update" />
-
-  </form>
-  </table>
-</div>
+        <div style="overflow:hidden; margin-top:20px;">
+          <input type="submit" name="STAB_UPDATE" value="Update" />
+        </div>
+  </form><!-- /#STAB_OPTION -->
+</div> <!-- /.wrap -->
 <?php
 }
 
