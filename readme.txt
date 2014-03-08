@@ -1,7 +1,7 @@
 === Plugin Name ===
 
     Contributors: shariarbd
-    Plugin Name: Scroll Top And Botton
+    Plugin Name: Scroll Top And Bottom
     Plugin URI: http://shariarbd.com/plugins/scroll-top-and-bottom/
     Tags: Scroll, Top And Botton, scroll up and down, Navigate, jQuery Scrolling 
     Author URI: http://shariarbd.com/
