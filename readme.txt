@@ -9,7 +9,7 @@
     Donate link: http://shariarbd.com/
     Requires at least: WordPress 3.0 
     Tested up to: 3.8.1 
-    Scroll Top and Bottom is created to scroll to top and bottom of the site. 12 Different Icon are available now and also you can control scrolling pseed! 
+    Scroll Top and Bottom is created to scroll to top and bottom of the site. 12 Different Icon are available now and also you can control scrolling speed! 
 
 
 == Description ==
@@ -37,6 +37,11 @@ Yes, see setting of the Plugin. But please be sure that the entered value is jus
 = Can I change buttons? =
 
 Normally No, But you can choose from 12 different buttons from settings.
+
+= Is there any Documentation page? =
+
+Yes, see at http://shariarbd.com/documentation-scroll-top-and-bottom-wp-plugin-v-2-6/
+
 
 
 == Screenshots ==
