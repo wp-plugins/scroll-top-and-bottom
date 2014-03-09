@@ -17,7 +17,7 @@
 
 				$(window).scroll(function() {
 				      if ($(this).scrollTop() > 200) {
-				         $('#scroll-to-top').fadeIn('slow').css('right','66px');
+				         $('#scroll-to-top').fadeIn('slow');
 				      } else {
 				          $('#scroll-to-top').fadeOut('slow');
 				      }
