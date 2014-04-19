@@ -3,7 +3,20 @@
 			 if($wp_STAB_icon_Select != true){
 			 $wp_STAB_icon_Select =2;
 			 }
-		
+			 if($wp_STAB_icon_Select=="13")
+			 {
+			 	$stab_up_btn = get_option('stab_up_btn');
+    			$stab_down_btn = get_option('stab_down_btn');
+
+    			?>
+		        <div style="display:none;" class="scroll-to-top" id="scroll-to-top">
+		         <?php echo '<img alt="&uarr;" width="32" height="32" src="' .$stab_up_btn. '" > '; ?>
+		        </div>
+				<div style="display:block;" class="scroll-to-bottom" id="scroll-to-bottom">
+		         <?php echo '<img alt="&darr;" width="32" height="32" src="' .$stab_down_btn. '" > '; ?>
+		        </div>
+				<?php
+				}else{
 		 ?>
         <div style="display:none;" class="scroll-to-top" id="scroll-to-top">
          <?php echo '<img alt="&uarr;" width="32" height="32" src="' .plugins_url( 'scroll-top-and-bottom/icon/'.$wp_STAB_icon_Select.'_u.ico' , dirname(__FILE__) ). '" > '; ?>
@@ -11,7 +24,7 @@
 		<div style="display:block;" class="scroll-to-bottom" id="scroll-to-bottom">
          <?php echo '<img alt="&darr;" width="32" height="32" src="' .plugins_url( 'scroll-top-and-bottom/icon/'.$wp_STAB_icon_Select.'_d.ico' , dirname(__FILE__) ). '" > '; ?>
         </div>
-		
+		<?php } ?>
 		<script>
 			$(document).ready(function() {
 

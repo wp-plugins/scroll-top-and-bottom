@@ -6,14 +6,14 @@
     Tags: Scroll, Top And Bottom, scroll up and down, Navigate, jQuery Scrolling 
     Author URI: http://shariarbd.com/
     Author: Md. Shariar
-    Donate link: http://shariarbd.com/
+    Donate link: http://shariarbd.com/donate/
     Requires at least: WordPress 3.0 
-    Tested up to: 3.8.1 
-    Scroll Top and Bottom is created to scroll to top and bottom of the site. 12 Different Icon are available now and also you can control scrolling speed! 
+    Tested up to: 3.9 
+    Custom button upload option with other 12 deferent set of button. Choose your choice to scroll top and bottom of your site. 
 
 
 == Description ==
-   Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now you can control the scrolling speed! 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
+   Scroll Top and Bottom is created to scroll or navigate to top and bottom of the site. User can go to top and bottom of the site using this tool easily. <strong>Now you can control the scrolling speed! and also added custom button upload and use options.</strong> 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
 
 
 == Installation ==
@@ -36,11 +36,11 @@ Yes, see setting of the Plugin. But please be sure that the entered value is jus
 
 = Can I change buttons? =
 
-Normally No, But you can choose from 12 different buttons from settings.
+Yes and also you have option to from 12 different buttons from settings.
 
 = Is there any Documentation page? =
 
-Yes, see at http://shariarbd.com/documentation-scroll-top-and-bottom-wp-plugin-v-2-6/
+Yes, see at http://shariarbd.com/documentation-page-scroll-top-and-bottom-wordpress-plugin-version-2-7/
 
 
 
