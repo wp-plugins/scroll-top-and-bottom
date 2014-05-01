@@ -46,4 +46,4 @@ Yes, see at http://shariarbd.com/documentation-page-scroll-top-and-bottom-wordpr
 
 == Screenshots ==
 
-1. Settings Page of the plugis.
+1. Settings Page of the plugin.
