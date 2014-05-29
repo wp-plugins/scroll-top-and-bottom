@@ -26,29 +26,14 @@
         </div>
 		<?php } ?>
 		<script>
-			$(document).ready(function() {
-
-				$(window).scroll(function() {
-				      if ($(this).scrollTop() > 200) {
-				         $('#scroll-to-top').fadeIn('slow');
-				      } else {
-				          $('#scroll-to-top').fadeOut('slow');
-				      }
-
-					if ($(this).scrollTop() > $(document).height() - screen.height) {
-				         $('#scroll-to-bottom').fadeOut('slow');
-				      } else {
-				         $('#scroll-to-bottom').fadeIn('slow');
-				      }
-
-				 }); 
+			jQuery(document).ready(function() {
 			
-				   $('.scroll-to-top').click(function(){
-				      $("html,body").animate({ scrollTop: 0 }, <?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>);
+				   jQuery('.scroll-to-top').click(function(){
+				      jQuery("html,body").animate({ scrollTop: 0 }, <?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>);
 				      return false;
 				   });
-				   $('.scroll-to-bottom').click(function(){
-				      $('html,body').animate({scrollTop: $(document).height()}, <?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>);
+				   jQuery('.scroll-to-bottom').click(function(){
+				      jQuery('html,body').animate({scrollTop: jQuery(document).height()}, <?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>);
 				      return false;
 				   });
             });

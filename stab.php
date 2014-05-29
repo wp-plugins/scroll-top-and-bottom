@@ -3,7 +3,7 @@
 Plugin Name: Scroll Top and Bottom
 Plugin URI: http://shariarbd.com/plugins/scroll-top-and-bottom/
 Description: Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now you can control the scrolling speed! 12 different icon has been added and you can choose them from settings. <stron>Custom Button uploader added, now it's posible set your own button</stron>. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
-Version: 2.8
+Version: 2.8.1
 Author: Md. Shariar
 Author URI: http://shariarbd.com/ 
 */
@@ -191,13 +191,7 @@ add_action('admin_print_styles', 'stab_admin_styles');
               <label for="STAB_scroll_speed"><h3>Scroll Speed</h3></label>
               <input type="text" name="STAB_scroll_speed" id="STAB_scroll_speed" value="<?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>" > Note: 1000=1s and this field must be a number.
 
-              <h3>jQuery Enable – Disable</h3>
-              <h4>
-                <?php $wp_STAB_jquery = get_option('STAB_jquery'); ?>
-                <input name="STAB_jquery" type="radio" id="STAB_jquery_yes" value="yes" <?php if($wp_STAB_jquery != "no") { echo('checked="checked"'); } ?> /><label for="STAB_jquery_yes"> jQuery Enabled</label>
-                <br>
-                <input name="STAB_jquery" type="radio" id="STAB_jquery_no" value="no" <?php if($wp_STAB_jquery == "no") { echo('checked="checked"'); } ?> /><label for="STAB_jquery_no"> jQuery Disabled</label>
-              </h4>
+            
               <span>If your site already use jQuery from before, it may not work. In that case, Disable jQuery here and it may work! </span>
               <div style="float:right; color:#09F; text-transform: capitalize;">
                   <strong>If you love this plugin, <a href="http://wordpress.org/extend/plugins/scroll-top-and-bottom/" target="_blank">Please Rate as five star.</a></strong> <br>
@@ -215,18 +209,13 @@ add_action('admin_print_styles', 'stab_admin_styles');
  }
 
 
-function scroll_tandbhead(){
-  $wp_STAB_jquery = get_option('STAB_jquery');
-  if($wp_STAB_jquery=="no")
-    { 
-    echo '<link rel="stylesheet" type="text/css" href="'.plugins_url( 'scroll-top-and-bottom/css/style.css' , dirname(__FILE__) ). '" />'; 
-    }
-  else{
-    echo '<script type="text/javascript" src="' .plugins_url( 'scroll-top-and-bottom/js/jquery-2.1.0.min.js' , dirname(__FILE__) ). '" ></script>';
-    echo '<link rel="stylesheet" type="text/css" href="'.plugins_url( 'scroll-top-and-bottom/css/style.css' , dirname(__FILE__) ). '" />'; 
-    }
+
+ function stab_load_script() {
+  wp_enqueue_script('newscript', plugins_url( '/js/script.js' , __FILE__ ),array('jquery') );
+  wp_enqueue_style( 'stab-style', plugins_url('/css/style.css', __FILE__) );
 }
-add_action('wp_head', 'scroll_tandbhead');
+add_action( 'wp_enqueue_scripts', 'stab_load_script' );
+
 
 
 function scroll_tandb(){
