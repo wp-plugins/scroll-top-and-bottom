@@ -3,7 +3,7 @@
 Plugin Name: Scroll Top and Bottom
 Plugin URI: http://shariarbd.com/plugins/scroll-top-and-bottom/
 Description: Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now you can control the scrolling speed! 12 different icon has been added and you can choose them from settings. <stron>Custom Button uploader added, now it's posible set your own button</stron>. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
-Version: 2.8.1
+Version: 2.8.2
 Author: Md. Shariar
 Author URI: http://shariarbd.com/ 
 */
