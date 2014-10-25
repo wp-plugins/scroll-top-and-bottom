@@ -9,10 +9,10 @@
     Donate link: http://shariarbd.com/donate/
     Requires at least: WordPress 3.0 
     Tested up to: 4
-    Custom button upload option with other 12 deferent set of button. Choose your choice to scroll top and bottom of your site. 
+    Custom button upload option with other 12 deferent set of button. Also you have option to control scroll speed and hide on pages. Choose your choice to scroll top and bottom of your site. 
 
 == Description ==
-   Scroll Top and Bottom is created to scroll or navigate to top and bottom of the site. User can go to top and bottom of the site using this tool easily. <strong>Now you can control the scrolling speed! and also added custom button upload and use options.</strong> 12 different icon has been added and you can choose them from settings. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
+  Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now you can control the scrolling speed! and hide on pages, 12 different icon has been added and you can choose them from settings. <strong>Custom Button uploader added, now it's possible to set your own button</strong>. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
 
 
 == Installation ==
@@ -39,7 +39,7 @@ Yes and also you have option to from 12 different buttons from settings.
 
 = Is there any Documentation page? =
 
-Yes, see at http://shariarbd.com/documentation-page-scroll-top-and-bottom-wordpress-plugin-version-2-7/
+Yes, see at http://shariarbd.com/http://shariarbd.com/scroll-top-and-bottom/
 
 
 
