@@ -8,7 +8,7 @@
     Author: Md. Shariar
     Donate link: http://shariarbd.com/donate/
     Requires at least: WordPress 3.0 
-    Tested up to: 4
+    Tested up to: 4.1.1
     Custom button upload option with other 12 deferent set of button. Also you have option to control scroll speed and hide on pages. Choose your choice to scroll top and bottom of your site. 
 
 == Description ==

@@ -3,7 +3,7 @@
 Plugin Name: Scroll Top and Bottom
 Plugin URI: http://shariarbd.com/plugins/scroll-top-and-bottom/
 Description:   Scroll Top and Bottom is created to scroll to top and bottom of the site. User can go to top and bottom of the site using this tool easily. Now you can control the scrolling speed! and hide on pages, 12 different icon has been added and you can choose them from settings. <strong>Custom Button uploader added, now it's possible to set your own button</strong>. This plugin is created with jQuery and <a href="http://shariarbd.com/" target="_blank">Demo is here.</a> Plugin is created by <cite><a href="http://shariarbd.com/" title="Md. Sahriar">Md. Shariar</a>.</cite>
-Version: 2.8.3
+Version: 2.8.5
 Author: Md. Shariar
 Author URI: http://shariarbd.com/ 
 */
@@ -48,18 +48,25 @@ function stab_plugin_page()
 {
 	if(isset($_POST['STAB_UPDATE'])){
 		update_option('STAB_icon_Select',$_POST['STAB_icon_Select']);
-		update_option('STAB_pageview',$_POST['STAB_pageview']);
 		update_option('STAB_scroll_speed',$_POST['STAB_scroll_speed']);
 		update_option('stab_up_btn',$_POST['stab_up_btn']);
 		update_option('stab_down_btn',$_POST['stab_down_btn']);
 
+		update_option('STAB_pageview',$_POST['STAB_pageview']);
+		update_option('STAB_postview',$_POST['STAB_postview']);
+		update_option('STAB_onlyHome',$_POST['STAB_onlyHome']);
+		update_option('STAB_whichBtn',$_POST['STAB_whichBtn']);
+
 		echo '<h3>Plugin has been updated.</h3>';
 	}
 	$wp_STAB_icon_Select = get_option('STAB_icon_Select');
-	$wp_STAB_pageview = get_option('STAB_pageview');
 	$wp_STAB_scroll_speed = get_option('STAB_scroll_speed');
 	$stab_up_btn = get_option('stab_up_btn');
 	$stab_down_btn = get_option('stab_down_btn');
+	$wp_STAB_pageview = get_option('STAB_pageview');
+	$wp_STAB_postview = get_option('STAB_postview');
+	$wp_STAB_onlyHome = get_option('STAB_onlyHome');
+	$wp_STAB_whichBtn = get_option('STAB_whichBtn');
 
 
 	echo '<div class="wrap">';
@@ -188,12 +195,24 @@ function stab_plugin_page()
 
 
 
-		<label for="STAB_scroll_speed"><h3>Scroll Speed</h3></label>
+		<label for="STAB_scroll_speed"><h4>Scroll Speed</h4></label>
 		<input type="text" name="STAB_scroll_speed" id="STAB_scroll_speed" value="<?php if($wp_STAB_scroll_speed=="") echo "1000"; else echo "$wp_STAB_scroll_speed";?>" > Note: 1000=1s and this field must be a number.
-		<br>
-		<br>
-		<label for="STAB_pageview"><h3>Hide On Pages</h3></label>
+		<br> 
+		<label for="STAB_pageview"><h4>Hide On Pages</h4></label>
 		<input type="checkbox" name="STAB_pageview" id="STAB_pageview" value="yes" <?php if($wp_STAB_pageview=="yes") echo "checked"; else echo "";?> > <label for="STAB_pageview">if Checked, Scroll buttons will not apper on pages.</label>
+		<br> 
+		<label for="STAB_postview"><h4>Hide On Posts</h4></label>
+		<input type="checkbox" name="STAB_postview" id="STAB_postview" value="yes" <?php if($wp_STAB_postview=="yes") echo "checked"; else echo "";?> > <label for="STAB_postview">if Checked, Scroll buttons will not apper on Posts.</label>
+		<br> 
+		<label for="STAB_onlyHome"><h4>Show On Only Home Page</h4></label>
+		<input type="checkbox" name="STAB_onlyHome" id="STAB_onlyHome" value="yes" <?php if($wp_STAB_onlyHome=="yes") echo "checked"; else echo "";?> > <label for="STAB_onlyHome">if Checked, Scroll buttons will apper only on Home Page.</label>
+		<br> 
+		<h4>Which Button will work</h4>
+		<input type="radio" name="STAB_whichBtn" id="STAB_whichBtn_1" value="1" <?php if($wp_STAB_whichBtn=="1" or $wp_STAB_whichBtn=="") echo "checked"; else echo "";?> > <label for="STAB_whichBtn_1">Both Button.</label>
+		<br>
+		<input type="radio" name="STAB_whichBtn" id="STAB_whichBtn_2" value="2" <?php if($wp_STAB_whichBtn=="2") echo "checked"; else echo "";?> > <label for="STAB_whichBtn_2">Only Up Button.</label>
+		<br>
+		<input type="radio" name="STAB_whichBtn" id="STAB_whichBtn_3" value="3" <?php if($wp_STAB_whichBtn=="3") echo "checked"; else echo "";?> > <label for="STAB_whichBtn_3">Only Down Button.</label>
 		<br>
 
 
@@ -218,13 +237,21 @@ function stab_plugin_page()
 function stab_load_script() { 
 
 	$wp_STAB_pageview = get_option('STAB_pageview');
+	$wp_STAB_postview = get_option('STAB_postview');
+	$wp_STAB_onlyHome = get_option('STAB_onlyHome');
 
 	if (is_page() && $wp_STAB_pageview =="yes") {
 		echo "<style> .scroll-btn-container { display:none!important; }  </style>  \n";
-	} else {
-	wp_enqueue_script('newscript', plugins_url( '/js/script.js' , __FILE__ ),array('jquery') );
-	wp_enqueue_style( 'stab-style', plugins_url('/css/style.css', __FILE__) );
-
+	}
+	elseif (is_single() && $wp_STAB_postview =="yes") {
+		echo "<style> .scroll-btn-container { display:none!important; }  </style>  \n";
+	}
+	elseif (!is_home() && $wp_STAB_onlyHome =="yes") {
+		echo "<style> .scroll-btn-container { display:none!important; }  </style>  \n";
+	} 
+	else {
+		wp_enqueue_script('newscript', plugins_url( '/js/script.js' , __FILE__ ),array('jquery') );
+		wp_enqueue_style( 'stab-style', plugins_url('/css/style.css', __FILE__) );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'stab_load_script' );
